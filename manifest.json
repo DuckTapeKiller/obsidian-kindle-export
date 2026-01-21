@@ -1,10 +1,10 @@
 {
 	"id": "obsidian-kindle-export",
 	"name": "Kindle",
-	"version": "0.0.14",
+	"version": "1.0.0",
 	"minAppVersion": "0.13.24",
 	"description": "Send .md as .epub to Ereader/Kindle/Pocketbook",
-	"author": "Simeon Stanek",
+	"author": "DuckTapeKiller",
 	"authorUrl": "https://github.com/SimeonLukas",
 	"isDesktopOnly": false
 }
