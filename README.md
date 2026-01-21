@@ -40,6 +40,8 @@ This plugin requires a companion PHP backend to perform the conversion.
 
 **Important:** If you are running the backend, make sure to use the modified `index.php` provided with this fork to get the **Cover Title Fix**.
 
+You need to use my forked version: https://github.com/DuckTapeKiller/Obsidian2Kindle/
+
 1. **Copy files:**
    Copy `main.js`, `manifest.json`, and `styles.css` to your Obsidian vault:
    `YourVault/.obsidian/plugins/obsidian-kindle-export/`
