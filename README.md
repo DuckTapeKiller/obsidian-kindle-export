@@ -12,8 +12,7 @@ This is a modified version of the **Obsidian2Kindle** plugin. It converts your O
 ## 🔥 Key Modifications & New Features
 
 ### 1. Enhanced Front Matter Handling
-- **Problem:** The original plugin displayed raw, ugly YAML front matter in the exported EPUB.
-- **Solution:** This version parses the front matter and renders it as a clean, styled HTML block at the top of your ebook.
+- This version parses the front matter and renders it as a clean, styled HTML block at the top of your ebook.
 - **Author Extraction:** Automatically extracts the `Author` or `Autor` field from your note's front matter and uses it as the book's author metadata.
 
 ### 2. Bulk Export Mode
