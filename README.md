@@ -1,4 +1,5 @@
-# Obsidian2Kindle Export (Modified by DuckTapeKiller)
+<img width="2752" height="1536" alt="Obsidian2Kinle Art" src="https://github.com/user-attachments/assets/6066a029-1033-4c2c-a338-c6585393d859" />
+
 
 ## Overview
 This is a modified version of the **Obsidian2Kindle** plugin. It converts your Obsidian notes (Markdown) into EPUB format and sends them to your Kindle or PocketBook via email.
