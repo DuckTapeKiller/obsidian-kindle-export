@@ -40,16 +40,10 @@ This plugin requires a companion PHP backend to perform the conversion.
 
 **Important:** If you are running the backend, make sure to use the modified `index.php` provided with this fork to get the **Cover Title Fix**.
 
-### Installing the Plugin
-1. **Build the plugin:**
-   ```bash
-   npm install
-   npm run build
-   ```
-2. **Copy files:**
+1. **Copy files:**
    Copy `main.js`, `manifest.json`, and `styles.css` to your Obsidian vault:
    `YourVault/.obsidian/plugins/obsidian-kindle-export/`
-3. **Reload Obsidian:**
+2. **Reload Obsidian:**
    Restart Obsidian or reload plugins to see version 1.0.0.
 
 ---
