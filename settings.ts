@@ -32,13 +32,13 @@ export class KindleSettingTab extends PluginSettingTab {
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("Email")
       .setDesc("Approved Email for your Kindle")
       .addText((text) =>
         text
           .setPlaceholder("you@obsidian.md")
-          .setValue(this.plugin.settings.sendmail)	
+          .setValue(this.plugin.settings.sendmail)
           .onChange(async (value) => {
             this.plugin.settings.sendmail = value;
             await this.plugin.saveSettings();
@@ -46,7 +46,7 @@ export class KindleSettingTab extends PluginSettingTab {
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("Kindlemail")
       .setDesc("Your Kindle/PocketBook email")
       .addText((text) =>
@@ -60,7 +60,7 @@ export class KindleSettingTab extends PluginSettingTab {
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("SMTP Host")
       .setDesc("Your SMTP host (e.g. smtp.gmail.com)")
       .addText((text) =>
@@ -74,7 +74,7 @@ export class KindleSettingTab extends PluginSettingTab {
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("SMTP Port")
       .setDesc("Your SMTP port (e.g. 587)")
       .addText((text) =>
@@ -87,7 +87,7 @@ export class KindleSettingTab extends PluginSettingTab {
             console.log(this.plugin.settings);
           })
       );
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("SMTP User")
       .setDesc("Username for your SMTP server e.g. your Mailadress")
       .addText((text) =>
@@ -103,7 +103,7 @@ export class KindleSettingTab extends PluginSettingTab {
 
 
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("SMTP Password")
       .setDesc("Your SMTP password")
       .addText((text) =>
@@ -117,7 +117,7 @@ export class KindleSettingTab extends PluginSettingTab {
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("Backend")
       .setDesc("Your backendadress (e.g. https://staneks.de/apps/md2mobi/) can be used for free or host your own Backend.")
       .addText((text) =>
@@ -131,7 +131,7 @@ export class KindleSettingTab extends PluginSettingTab {
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("Generate TOC")
       .setDesc("Generate Table of Contents.")
       .addToggle((toggle) =>
@@ -143,10 +143,10 @@ export class KindleSettingTab extends PluginSettingTab {
             console.log(this.plugin.settings);
           })
       );
-      containerEl.createEl("hr");
-      containerEl.createEl("h1", { text: "⭐ Suggested features" });
-     
-      new Setting(containerEl)
+    containerEl.createEl("hr");
+    containerEl.createEl("h1", { text: "⭐ Suggested features" });
+
+    new Setting(containerEl)
       .setName("Pagebreak by '---'")
       .setDesc("Suggested feature: Activate pagebreak by '---'")
       .addToggle((toggle) =>
@@ -159,7 +159,7 @@ export class KindleSettingTab extends PluginSettingTab {
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("Markdown merge")
       .setDesc("Suggested feature: Merge .md files into one file (adds Kindle: Mergedown command) Plugin reloads after saving.")
       .addToggle((toggle) =>
@@ -169,12 +169,12 @@ export class KindleSettingTab extends PluginSettingTab {
             this.plugin.settings.mergedown = value;
             await this.plugin.saveSettings();
             console.log(this.plugin.settings);
-            this.app.plugins.unloadPlugin('obsidian-kindle-export');
-            this.app.plugins.loadPlugin('obsidian-kindle-export');
+            (this.app as any).plugins.unloadPlugin('obsidian-kindle-export');
+            (this.app as any).plugins.loadPlugin('obsidian-kindle-export');
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("Exportpath")
       .setDesc("Set the path where you want to export your files to. (e.g. /folder)")
       .addText((text) =>
@@ -188,31 +188,61 @@ export class KindleSettingTab extends PluginSettingTab {
           })
       );
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName("Add Ribbon-Icon")
       .setDesc("Suggested feature: Add Ribbon-Icon for the Export-Command. Plugin reloads after saving.")
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.ribbonicon)
           .onChange(async (value) => {
-            this.plugin.settings.ribbonicon= value;
+            this.plugin.settings.ribbonicon = value;
             await this.plugin.saveSettings();
             console.log(this.plugin.settings);
-            this.app.plugins.unloadPlugin('obsidian-kindle-export');
-            this.app.plugins.loadPlugin('obsidian-kindle-export');
+            (this.app as any).plugins.unloadPlugin('obsidian-kindle-export');
+            (this.app as any).plugins.loadPlugin('obsidian-kindle-export');
           })
       );
 
-      containerEl.createEl("hr");
-      containerEl.createEl("p", { text: "Host your own Obsidian2Kindle-Converter."});
-      containerEl.createEl("a", { text: "Fork from Github 🔗", href: "https://github.com/SimeonLukas/Obsidian2Kindle"});
-      containerEl.createEl("br");
+    containerEl.createEl("hr");
+    containerEl.createEl("h1", { text: "Bulk Export Features" });
 
-  
-      containerEl.createEl("a", { text: "Buy me a ☕", href: "https://www.buymeacoffee.com/simeonlukas"});
+    new Setting(containerEl)
+      .setName("Bulk Export Folder")
+      .setDesc("Folder to export all files from (e.g. '2 - ARTÍCULOS/PEDRO PEREZ').")
+      .addText((text) =>
+        text
+          .setPlaceholder("Folder/Path")
+          .setValue(this.plugin.settings.bulkFolder)
+          .onChange(async (value) => {
+            this.plugin.settings.bulkFolder = value;
+            await this.plugin.saveSettings();
+            console.log(this.plugin.settings);
+          })
+      );
+
+    new Setting(containerEl)
+      .setName("Bulk Export Mode")
+      .setDesc("Enable to export all files in the Bulk Export Folder. DISABLE THIS for normal single-file export!")
+      .addToggle((toggle) =>
+        toggle
+          .setValue(this.plugin.settings.bulkMode)
+          .onChange(async (value) => {
+            this.plugin.settings.bulkMode = value;
+            await this.plugin.saveSettings();
+            console.log(this.plugin.settings);
+          })
+      );
+
+    containerEl.createEl("hr");
+    containerEl.createEl("p", { text: "Host your own Obsidian2Kindle-Converter." });
+    containerEl.createEl("a", { text: "Fork from Github 🔗", href: "https://github.com/SimeonLukas/Obsidian2Kindle" });
+    containerEl.createEl("br");
+
+
+    containerEl.createEl("a", { text: "Buy me a ☕", href: "https://www.buymeacoffee.com/simeonlukas" });
 
 
 
-          
-    }
-    }
+
+  }
+}
