@@ -1,3 +1,10 @@
+[![GitHub Repo stars](https://img.shields.io/github/stars/DuckTapeKiller/obsidian-kindle-export?style=flat&logo=obsidian&color=%23f39c12)](https://github.com/DuckTapeKiller/obsidian-kindle-export/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/DuckTapeKiller/obsidian-kindle-export?logo=obsidian&color=%23f39c12)](https://github.com/DuckTapeKiller/obsidian-kindle-export/issues)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/DuckTapeKiller/obsidian-kindle-export?logo=obsidian&color=%23f39c12)](https://github.com/DuckTapeKiller/obsidian-kindle-export/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub manifest version](https://img.shields.io/github/manifest-json/v/DuckTapeKiller/obsidian-kindle-export?logo=obsidian&color=%23f39c12)](https://github.com/DuckTapeKiller/obsidian-kindle-export/blob/main/manifest.json)
+[![Downloads](https://img.shields.io/github/downloads/DuckTapeKiller/obsidian-kindle-export/total?logo=obsidian&color=%23f39c12)](https://github.com/DuckTapeKiller/obsidian-kindle-export/releases)
+
+
 <img width="2752" height="1536" alt="Obsidian2Kinle Art" src="https://github.com/user-attachments/assets/6066a029-1033-4c2c-a338-c6585393d859" />
 
 
